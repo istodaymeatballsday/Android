@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
 
         ApiHandler.getStatus(object : ApiResponseHandler{
             override fun onResponse(value: String) {
-                println(value)
                 this@MainActivity.runOnUiThread { responseTV.text = value }
             }
         })
